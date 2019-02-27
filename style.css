@@ -1,0 +1,33 @@
+body {
+    font-family: arial,sans-serif;
+}
+
+.zad1-Header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.zad1-Header-icon {
+    font-size: 13px;
+    margin: 10px;
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+
+}
+.zad1-Header-icon:hover{
+    text-decoration: underline;
+} 
+
+.zad1-Main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.zad1-MainNavigation{
+    
+    display: flex;
+    align-items: center;
+}

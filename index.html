@@ -4,23 +4,26 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Google</title>
+    <link rel="Stylesheet" href="style.css">
 
 </head>
 
 <body>
    <header class="zad1-Header">
-       <a href="https://gmail.com">Gmail</a>
-       <a href="https://www.google.pl/imghp?hl=pl&tab=wi&authuser=0">Grafika</a>
-       <a href="https://about.google/intl/pl/products"><img src="app.png"></a>
-       <a href="#"><img src="notice.png"></a>
-       <a href="#"><img src="account.png"></a>
+       <a class="zad1-Header-icon" href="https://gmail.com">Gmail</a>
+       <a class="zad1-Header-icon" href="https://www.google.pl/imghp?hl=pl&tab=wi&authuser=0">Grafika</a>
+       <a class="zad1-Header-icon" href="https://about.google/intl/pl/products"><img src="app.png"></a>
+       <a class="zad1-Header-icon" href="#"><img src="notice.png"></a>
+       <a class="zad1-Header-icon" href="#"><img src="account.png"></a>
    </header>
 
    <main class="zad1-Main">
        <img class="zad1-Main-logo" src="logo.png"></img>
        <input class="zad1-Main-search"></input>
-       <button class="zad1-Main-button zad1-Main-button--search">Szukaj w Google</button>
-       <button class="zad1-Main-button zad1-Main-button--luckyShot">Szczęśliwy traf</button>
+       <div class="zad1-MainNavigation">
+            <button class="zad1-MainNavigation-button zad1-MainNavigation-button--search">Szukaj w Google</button>
+            <button class="zad1-MainNavigation-button zad1-MainNavigation-button--luckyShot">Szczęśliwy traf</button>
+        </div>
    </main>
 
    <footer class="zad1-Footer">
