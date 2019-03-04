@@ -1,33 +1,132 @@
 body {
-    font-family: arial,sans-serif;
+    font-family: arial, sans-serif;
+    margin: 0;
 }
 
 .zad1-Header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
 }
+
 .zad1-Header-icon {
     font-size: 13px;
-    margin: 10px;
+    margin: 18px 18px 0 2px;
     text-decoration: none;
     color: rgb(34, 34, 34);
-
 }
-.zad1-Header-icon:hover{
-    text-decoration: underline;
-} 
 
-.zad1-Main{
+.zad1-Header-icon:hover {
+    text-decoration: underline;
+}
+
+.zad1-Main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    margin: 100px;
+    padding-bottom: 20px;
 }
 
-.zad1-MainNavigation{
-    
+.zad1-Search {
     display: flex;
     align-items: center;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: 1px rgb(223, 225, 229) solid;
+    width: 520px;
+    height: 50px;
+}
+
+.zad1-Search:hover {
+    box-shadow: rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
+}
+
+.zad1-Search--isActive {
+    box-shadow: rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
+}
+
+.zad1-Search-keyboard {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.zad1-Search-input {
+    border: none;
+    width: 456px;
+    margin: 4px auto;
+}
+
+.zad1-MainNavigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 58px;
+    width: 571px;
+}
+
+.zad1-MainNavigation-button {
+    padding: 10px;
+    margin: 8px;
+    background-color: rgb(244, 244, 244);
+    color: rgb(108, 110, 110);
+    height: 36px;
+    border-radius: 5px;
+    border-style: none;
+    border: 1px white solid;
+}
+
+.zad1-MainNavigation-button:hover {
+    border: 1px rgb(108, 110, 110) solid;
+    color: black;
+}
+
+.zad1-Footer {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.zad1-Info {
+    height: 41px;
+    width: 100%;
+    color: rgb(108, 110, 110);
+    background-color: rgb(242, 242, 242);
+    text-decoration: none;
+    font-size: 13px;
+    border-top: 1px rgb(228, 228, 228) solid;
+    margin: 0;
+}
+
+.zad1-Info-country {
+    margin-left: 15px;
+}
+
+.zad1-info-anchor:link {
+    text-decoration: none;
+    color: rgb(108, 110, 110);
+}
+
+.zad1-info-anchor:visited {
+    color: rgb(108, 110, 110);
+}
+
+.zad1-info-anchor--left:hover {
+    text-decoration: underline;
+}
+
+.zad1-info-anchor--right:hover {
+    text-decoration: underline;
+}
+
+.zad1-info-anchor--left {
+    float: left;
+    padding: 15px;
+}
+
+.zad1-info-anchor--right {
+    float: right;
+    padding: 15px;
 }
