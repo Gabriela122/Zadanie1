@@ -1,3 +1,4 @@
+@import 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css';
 body {
     font-family: arial, sans-serif;
     margin: 0;
@@ -46,10 +47,21 @@ body {
     box-shadow: rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
 }
 
-.zad1-Search-keyboard {
-    margin-right: 10px;
-    width: 24px;
-    height: 24px;
+.fa-search {
+    margin-left: 15px;
+    margin-right: 5px;
+    color: rgb(82, 143, 245);
+}
+
+.fa-keyboard {
+    color: rgb(123, 123, 123);
+    margin-right: 15px;
+    margin-left: 5px;
+}
+
+.fa-microphone {
+    color: rgb(66, 133, 244);
+    margin-right: 15px;
 }
 
 .zad1-Search-input {
@@ -66,18 +78,16 @@ body {
     width: 571px;
 }
 
-.zad1-MainNavigation-button {
-    padding: 10px;
+.zad1-MainNavigation-button.mdc-button.mdc-button--unelevated {
     margin: 8px;
     background-color: rgb(244, 244, 244);
     color: rgb(108, 110, 110);
-    height: 36px;
-    border-radius: 5px;
-    border-style: none;
-    border: 1px white solid;
+    text-transform: initial;
+    font-family: arial, sans-serif;
+    letter-spacing: normal;
 }
 
-.zad1-MainNavigation-button:hover {
+.zad1-MainNavigation-button.mdc-button.mdc-button--unelevated:hover {
     border: 1px rgb(108, 110, 110) solid;
     color: black;
 }

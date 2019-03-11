@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Google</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <link rel="Stylesheet" href="style.css">
 
 </head>
@@ -12,20 +16,22 @@
     <header class="zad1-Header">
         <a class="zad1-Header-icon" href="https://gmail.com">Gmail</a>
         <a class="zad1-Header-icon" href="https://www.google.pl/imghp?hl=pl&tab=wi&authuser=0">Grafika</a>
-        <a class="zad1-Header-icon" href="https://about.google/intl/pl/products"><img src="app.png" alt="apps"></a>
-        <a class="zad1-Header-icon" href="#"><img src="notice.png" alt="notice"></a>
-        <a class="zad1-Header-icon" href="#"><img src="account.png" alt="account"></a>
+        <a class="zad1-Header-icon" href="https://about.google/intl/pl/products"><i class="fas fa-grip-horizontal"></i>
+            <a class="zad1-Header-icon" href="#"><img src="notice.png" alt="notice"></a>
+            <a class="zad1-Header-icon" href="#"><img src="account.png" alt="account"></a>
     </header>
 
     <main class="zad1-Main">
         <img class="zad1-Main-logo" src="logo.png" alt="google">
         <div class="zad1-Search">
+            <i class="fas fa-search"></i>
             <input class="zad1-Search-input">
-            <img class="zad1-Search-keyboard" src="klawiatura.png" alt="keyboard">
+            <i class="fas fa-keyboard"></i>
+            <i class="fas fa-microphone"></i>
         </div>
         <div class="zad1-MainNavigation">
-            <button class="zad1-MainNavigation-button zad1-MainNavigation-button--search">Szukaj w Google</button>
-            <button class="zad1-MainNavigation-button zad1-MainNavigation-button--luckyShot">Szczęśliwy traf</button>
+            <button class="zad1-MainNavigation-button mdc-button mdc-button--unelevated">Szukaj w Google</button>
+            <button class="zad1-MainNavigation-button mdc-button mdc-button--unelevated">Szczęśliwy traf</button>
         </div>
     </main>
 
@@ -48,6 +54,9 @@
         document.getElementsByClassName("zad1-Search-input")[0].addEventListener("focus", () => document.getElementsByClassName("zad1-Search")[0].classList.add("zad1-Search--isActive"));
 
         document.getElementsByClassName("zad1-Search-input")[0].addEventListener("blur", () => document.getElementsByClassName("zad1-Search")[0].classList.remove("zad1-Search--isActive")); 
+    </script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js">
+        mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
     </script>
 </body>
 
