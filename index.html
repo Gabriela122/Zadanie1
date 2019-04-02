@@ -9,6 +9,7 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <link rel="Stylesheet" href="style.css">
+    <link rel="stylesheet" href="shared.css">
 
 </head>
 
@@ -62,79 +63,7 @@
 
     <script src="animals.js"></script>
 
-    <script>
-        Vue.component('auto-complete', {
-            template: `
-                <div class="auto-complete">
-                    <input type="text" v-model="input">
-                    <table v-if="input.length > 0">
-                        <tbody>
-                            <tr v-for="animal in data">
-                            <td>{{ animal }}</td>
-                            </tr>
-                    </tbody>
-                    </table>
-                    </div>
-            `,
-            props: {
-                data: { type: Array, required: true },
-                // input: ''
-            },
-            computed:{
-                data: function () {
-                    var self = this;
-                    var filteredAnimals = animals.filter( function(animal) {
-                        return animal.substring(0, self.input.length).toLowerCase() === self.input.toLowerCase();
-                    });
-                    return filteredAnimals.length > 9 ? filteredAnimals.slice(0, 10) : filteredAnimals;
-                }  
-            },
-            data() {
-                return {
-                    input: ''
-                }
-            }
-        })
-
-        new Vue({
-            el: ".zad1-Main",
-
-            data: {
-                animals: window.animals
-            }
-        })
-
-
-
-
-
-/*
-        var app = new Vue({
-            el: '.zad1-Search',
-            data: {
-                inputContent: ''                
-                
-            }
-            //instancja vue.js
-            // https://www.endfront.pl/2018/10/22/wprowadzenie-vue-js/
-        });
-        //pkt 5
-      
-
-        Vue.component('v-autocomplete', {
-            data: function(){
-                return{
-                    animals: window.animals
-                }
-            },
-            template: '<input v-model="inputContent" :items="animals" class="zad1-Search-input">{{ inputContent }}'
-        })
-
-        //pkt 6 https://github.com/paliari/v-autocomplete
-
-
-        */
-    </script>
+    <script src="autocompleter.js"></script>
 
 
 </body>

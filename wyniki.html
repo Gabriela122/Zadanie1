@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wyniki Google</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="Stylesheet" href="shared.css">
+    <link rel="stylesheet" href="results.css">
+
+</head>
+
+<body>
+    <header class="zad1-Header">
+        <img class="zad1-Header-logo" src="logo.png" alt="google">
+        <div class="zad1-Search">
+            <auto-complete :data="animals"></auto-complete>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-keyboard"></i>
+            <i class="fas fa-microphone"></i>
+        </div>
+        <div class="zad1-Header-icons">
+            <a class="zad1-Header-icon" href="https://about.google/intl/pl/products"><i
+                    class="fas fa-grip-horizontal"></i>
+                <a class="zad1-Header-icon" href="#"><img src="account.png" alt="account"></a>
+        </div>
+    </header>
+    <nav class="zad1-Nav">
+
+        <div>Wszystko</div>
+        <div>Wiadomości</div>
+        <div>Grafika</div>
+        <div>Zakupy</div>
+        <div>Filmy</div>
+        <div>Więcej</div>
+        <div>Ustawienia</div>
+        <div>Narzędzia</div>
+
+
+    </nav>
+    <main class="zad1-Results">
+        <div class="zad1-Results-wrapper">
+            <a class="zad1-Link" href="#">
+                <h2 class="zad1-Link-header">Lorem Ipsum</h2>
+                <p class="zad1-Link-para">https://lorem.com</p>
+            </a>
+            <p class="zad1-Results-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non felis dictum
+                tellus sagittis sollicitudin quis eu erat. Duis metus ante, tincidunt a justo et, auctor laoreet augue.
+            </p>
+        </div>
+        <div class="zad1-Results-wrapper">
+            <a class="zad1-Link" href="#">
+                <h2 class="zad1-Link-header">Lorem Ipsum</h2>
+                <p class="zad1-Link-para">https://ipsum.com</p>
+            </a>
+            <p class="zad1-Results-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non felis dictum
+                tellus sagittis sollicitudin quis eu erat. Duis metus ante, tincidunt a justo et, auctor laoreet augue.
+            </p>
+        </div>
+        <div class="zad1-Results-wrapper">
+            <a class="zad1-Link" href="#">
+                <h2 class="zad1-Link-header">Lorem Ipsum</h2>
+                <p class="zad1-Link-para">https://loremipsum.com</p>
+            </a>
+            <p class="zad1-Results-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non felis dictum
+                tellus sagittis sollicitudin quis eu erat. Duis metus ante, tincidunt a justo et, auctor laoreet augue.
+            </p>
+        </div>
+    </main>
+
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js">
+        mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="animals.js"></script>
+    <script src="autocompleter.js"></script>
+    <script src="search.js"></script>
+
+
+</body>
+
+</html>

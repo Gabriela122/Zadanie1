@@ -1,0 +1,57 @@
+.zad1-Header {
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    align-items: center;
+}
+
+.zad1-Header-logo {
+    height: auto;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.zad1-Search {
+    width: 800px;
+}
+
+.zad1-Header-icons {
+    margin-left: 400px;
+}
+
+.zad1-Nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 500px 0 150px;
+    color: rgb(119, 119, 119);
+}
+
+.zad1-Results {
+    margin: 50px 500px 0 150px;
+}
+
+.zad1-Results-wrapper {
+    display: none;
+}
+
+.zad1-Link {
+    text-decoration: none;
+}
+
+.zad1-Link-header {
+    margin: 0;
+}
+
+.zad1-Link-header:hover {
+    text-decoration: underline;
+}
+
+.zad1-Link-para {
+    color: green;
+    margin: 0;
+}
+
+.zad1-Results-para {
+    color: rgb(119, 119, 119);
+    word-wrap: break-word;
+}

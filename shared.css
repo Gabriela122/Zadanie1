@@ -1,0 +1,65 @@
+body {
+    font-family: arial, sans-serif;
+    margin: 0;
+}
+
+.zad1-Header-icon {
+    font-size: 13px;
+    margin: 18px 18px 0 2px;
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+}
+
+.zad1-Header-icon:hover {
+    text-decoration: underline;
+}
+
+.zad1-Search {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px rgb(223, 225, 229) solid;
+    width: 520px;
+    height: 50px;
+}
+
+.zad1-Search:hover {
+    box-shadow: rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
+}
+
+.zad1-Search--isActive {
+    box-shadow: rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
+}
+
+.auto-complete-input {
+    border: none;
+    margin-left: 20px;
+    width: 100px;
+}
+
+.fa-search {
+    margin-left: 15px;
+    margin-right: 5px;
+    color: rgb(82, 143, 245);
+}
+
+.auto-complete {
+    width: 100%;
+}
+
+.fa-keyboard {
+    color: rgb(123, 123, 123);
+    margin-right: 15px;
+    margin-left: 5px;
+}
+
+.fa-microphone {
+    color: rgb(66, 133, 244);
+    margin-right: 15px;
+}
+
+.zad1-Search-input {
+    border: none;
+    width: 456px;
+    margin: 4px auto;
+}
