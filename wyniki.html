@@ -9,6 +9,12 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="Stylesheet" href="shared.css">
     <link rel="stylesheet" href="results.css">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js">
+        mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
 </head>
 
@@ -27,56 +33,155 @@
                 <a class="zad1-Header-icon" href="#"><img src="account.png" alt="account"></a>
         </div>
     </header>
-    <nav class="zad1-Nav">
 
-        <div>Wszystko</div>
+    <div id="app">
+        <nav class="zad1-Nav">
+            <div class="nav-item">
+                <router-link class="nav-link" :to="{ path: '/wszystko' }">Wszystko</router-link>
+            </div>
+            <div class="nav-item">
+                <router-link class="nav-link" :to="{ path: '/wiadomości' }">Wiadomości</a>
+            </div>
+            <div class="nav-item">
+                <router-link class="nav-link" :to="{ path: '/grafika' }">Grafika</a>
+            </div>
+            <div class="nav-item">
+                <router-link class="nav-link" :to="{ path: '/zakupy' }">Zakupy</a>
+            </div>
+            <div class="nav-item">
+                <router-link class="nav-link" :to="{ path: '/filmy' }">Filmy</a>
+            </div>
+            <div class="nav-item">
+                <router-link class="nav-link" :to="{ path: '/więcej' }">Więcej</a>
+            </div>
+            <div class="nav-item">
+                <router-link class="nav-link" :to="{ path: '/ustawienia' }">Ustawienia</a>
+            </div>
+            <div class="nav-item">
+                <router-link class="nav-link" :to="{ path: '/narzędzia' }">Narzędzia</a>
+            </div>
+
+        </nav>
+        <div class="line"></div>
+        <div class="container col-10">
+            <div class="jumbotron mt-3">
+                <router-view keep-alive></router-view>
+            </div>
+        </div>
+    </div>
+
+
+    <template id="wszystko">
+        <transition name="component-fade" appear>
+            <div class="container">
+                <main class="zad1-Results">
+                    <div class="zad1-Results-wrapper">
+                        <a class="zad1-Link" href="#">
+                            <h2 class="zad1-Link-header">Lorem Ipsum</h2>
+                            <p class="zad1-Link-para">https://lorem.com</p>
+                        </a>
+                        <p class="zad1-Results-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non
+                            felis dictum
+                            tellus sagittis sollicitudin quis eu erat. Duis metus ante, tincidunt a justo et, auctor
+                            laoreet augue.
+                        </p>
+                    </div>
+                    <div class="zad1-Results-wrapper">
+                        <a class="zad1-Link" href="#">
+                            <h2 class="zad1-Link-header">Lorem Ipsum</h2>
+                            <p class="zad1-Link-para">https://ipsum.com</p>
+                        </a>
+                        <p class="zad1-Results-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non
+                            felis dictum
+                            tellus sagittis sollicitudin quis eu erat. Duis metus ante, tincidunt a justo et, auctor
+                            laoreet augue.
+                        </p>
+                    </div>
+                    <div class="zad1-Results-wrapper">
+                        <a class="zad1-Link" href="#">
+                            <h2 class="zad1-Link-header">Lorem Ipsum</h2>
+                            <p class="zad1-Link-para">https://loremipsum.com</p>
+                        </a>
+                        <p class="zad1-Results-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non
+                            felis dictum
+                            tellus sagittis sollicitudin quis eu erat. Duis metus ante, tincidunt a justo et, auctor
+                            laoreet augue.
+                        </p>
+                    </div>
+                </main>
+            </div>
+        </transition>
+    </template>
+
+    <template id="wiadomosci">
+        <transition name="component-fade" mode="out-in" appear>
+            <div class="container">
+                <h1 class="container-wiadomosci abs">Hello Wiadomości!</h1>
+            </div>
+        </transition>
+    </template>
+
+    <template id="grafika">
+        <transition name="component-fade" appear>
+            <div class="container">
+                <h1 class="container-grafika abs">Hello Grafika!</h1>
+            </div>
+        </transition>
+    </template>
+
+    <template id="zakupy">
+        <transition name="component-fade" appear>
+            <div class="container">
+                <h1 class="container-zakupy abs">Hello Zakupy!</h1>
+            </div>
+        </transition>
+    </template>
+    <template id="filmy">
+        <transition name="component-fade" appear>
+            <div class="container">
+                <h1 class="container-filmy abs">Hello Filmy!</h1>
+            </div>
+        </transition>
+    </template>
+    <template id="wiecej">
+        <transition name="component-fade" appear>
+            <div class="container">
+                <h1 class="container-wiecej abs">Hello Więcej!</h1>
+            </div>
+        </transition>
+    </template>
+    <template id="ustawienia">
+        <transition name="component-fade" appear>
+            <div class="container">
+                <h1 class="container-ustawienia abs">Hello Ustawienia!</h1>
+            </div>
+        </transition>
+    </template>
+    <template id="narzedzia">
+        <transition name="component-fade" appear>
+            <div class="container">
+                <h1 class="ustawienia-narzedzia abs">Hello Narzędzia!</h1>
+            </div>
+        </transition>
+    </template>
+    <!-- <div>Wszystko</div>
         <div>Wiadomości</div>
         <div>Grafika</div>
         <div>Zakupy</div>
         <div>Filmy</div>
         <div>Więcej</div>
         <div>Ustawienia</div>
-        <div>Narzędzia</div>
+        <div>Narzędzia</div> -->
 
 
-    </nav>
-    <main class="zad1-Results">
-        <div class="zad1-Results-wrapper">
-            <a class="zad1-Link" href="#">
-                <h2 class="zad1-Link-header">Lorem Ipsum</h2>
-                <p class="zad1-Link-para">https://lorem.com</p>
-            </a>
-            <p class="zad1-Results-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non felis dictum
-                tellus sagittis sollicitudin quis eu erat. Duis metus ante, tincidunt a justo et, auctor laoreet augue.
-            </p>
-        </div>
-        <div class="zad1-Results-wrapper">
-            <a class="zad1-Link" href="#">
-                <h2 class="zad1-Link-header">Lorem Ipsum</h2>
-                <p class="zad1-Link-para">https://ipsum.com</p>
-            </a>
-            <p class="zad1-Results-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non felis dictum
-                tellus sagittis sollicitudin quis eu erat. Duis metus ante, tincidunt a justo et, auctor laoreet augue.
-            </p>
-        </div>
-        <div class="zad1-Results-wrapper">
-            <a class="zad1-Link" href="#">
-                <h2 class="zad1-Link-header">Lorem Ipsum</h2>
-                <p class="zad1-Link-para">https://loremipsum.com</p>
-            </a>
-            <p class="zad1-Results-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non felis dictum
-                tellus sagittis sollicitudin quis eu erat. Duis metus ante, tincidunt a justo et, auctor laoreet augue.
-            </p>
-        </div>
-    </main>
+    <!-- </nav> -->
 
 
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js">
-        mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
     <script src="animals.js"></script>
     <script src="autocompleter.js"></script>
+    <script src="router.js"></script>
     <script src="search.js"></script>
 
 

@@ -33,7 +33,7 @@ Vue.component('auto-complete', {
 
 new Vue ({
     el: ".zad1-Search",
-
+    
     data: {
         animals: window.animals
     }

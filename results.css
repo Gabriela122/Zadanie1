@@ -23,7 +23,23 @@
     display: flex;
     justify-content: space-between;
     margin: 0 500px 0 150px;
+}
+
+.nav-link {
     color: rgb(119, 119, 119);
+    text-decoration: none;
+}
+
+.nav-link:focus, .nav-link:active {
+    color: rgb(26, 115, 232);
+    font-weight: bold;
+    border-bottom: 2px solid rgb(26, 115, 232);
+    padding-bottom: 5px;
+}
+
+.line {
+    margin-top: 7px;
+    border: 0.5px solid rgb(235, 235, 235);
 }
 
 .zad1-Results {
@@ -31,7 +47,7 @@
 }
 
 .zad1-Results-wrapper {
-    display: none;
+    display: block;
 }
 
 .zad1-Link {
@@ -55,3 +71,16 @@
     color: rgb(119, 119, 119);
     word-wrap: break-word;
 }
+
+.abs {
+    margin: 50px 500px 0 150px;
+}
+
+/* 
+.component-fade-enter-active, .component-fade-leave-active {
+    transition: opacity .3s ease;
+}
+
+.component-fade-enter, .component-fade-leave-to {
+    opacity: 0;
+} */

@@ -16,11 +16,11 @@ body {
 
 .zad1-Search {
     display: flex;
-    align-items: center;
+    align-items: start;
     border-radius: 30px;
     border: 1px rgb(223, 225, 229) solid;
     width: 520px;
-    height: 50px;
+    padding: 20px 0;
 }
 
 .zad1-Search:hover {
@@ -31,10 +31,12 @@ body {
     box-shadow: rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
 }
 
+.auto-complete {}
+
 .auto-complete-input {
     border: none;
     margin-left: 20px;
-    width: 100px;
+    width: 100%;
 }
 
 .fa-search {
